@@ -7,6 +7,9 @@ table {
   padding: 3rem;
   text-align: center;
 }
+h1 {
+  text-align: center;
+}
 thead {
   background: blue;
 
