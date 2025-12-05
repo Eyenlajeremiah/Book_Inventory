@@ -1,0 +1,82 @@
+table {
+  width: 90vw;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  border-collapse: collapse;
+  padding: 3rem;
+  text-align: center;
+}
+thead {
+  background: blue;
+
+  
+}
+th, td {
+padding: 0.5rem;
+}
+
+tr[class="read"] {
+  background: linear-gradient(to right, orange);
+  padding: 2rem;
+}
+tr[class="to-read"] {
+  background: linear-gradient(to right, green);
+}
+tr[class="in-progress"]{
+  background: linear-gradient(to left, blue);
+}
+span {
+  display: inline-block;
+}
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(45deg, red, yellow )
+}
+tr[class="read"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(45deg, green, yellow )
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid black;
+  background-image: linear-gradient(45deg, blue, yellow )
+}
+span[class="status"], span[class^="rate"] {
+  height: 1.3rem;
+  width: 5rem;
+  padding: 0.3rem;
+}
+span[class="status"] {
+  border-radius: 10px;
+  width: 5rem;
+  height: 1.3rem;
+  padding: 0.3rem;
+  text-align: center;
+  background-color: Yellow;
+}
+span[class^="rate"] {
+  width: 5rem;
+  height: 1.3rem;
+  padding: 0.3rem;
+  text-align: center;
+}
+span[class^="rate"] > span{
+  border: 1px solid grey;
+  background-color: white;
+  margin: 0rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
+  
+}
+
+span[class~="one"] > :first-child {
+  background-image: linear-gradient(30deg, green,yellow)
+}
+span[class~="two"] > :first-child, span[class~="two"] > :nth-child(2) {
+  background-image: linear-gradient(30deg, red,yellow)
+}
+span[class~="three"] > span {
+  background-image: linear-gradient(30deg, red,yellow);
+}
